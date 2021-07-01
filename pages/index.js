@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Head from "next/head";
 import dynamic from 'next/dynamic';
+import { DefaultButton } from '@fluentui/react/lib-commonjs/Button';
 
 import styles from "../styles/Home.module.css";
 
@@ -17,6 +18,9 @@ export default function Home() {
         <title>Kaartomatic</title>
         <meta name="description" content="The place for your next vacation" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
       </Head>
 
       <main className={styles.main}>
@@ -27,6 +31,15 @@ export default function Home() {
           <p className={styles.description}>Místo pro váš příští výlet!</p>
 
         </div>
+        <DefaultButton style={{
+          marginTop: 50,
+          background: "#ACF39D",
+          width: 200,
+          maxWidth: "90%"
+        }}
+        >
+          Nevím cum!
+        </DefaultButton>
         <div className={styles.grid}>
           <p>
             Karlův most je nuda! Kaartomatic pomáhá zviditelnit méně známá
