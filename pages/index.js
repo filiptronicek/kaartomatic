@@ -22,7 +22,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.hero}>
           <img src="/logo.png" />
-          <h1 className={styles.title}>Caartomatic</h1>
+          <h1 className={styles.title}>Kaartomatic</h1>
 
           <p className={styles.description}>Místo pro váš příští výlet!</p>
 

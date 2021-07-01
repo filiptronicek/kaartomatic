@@ -82,6 +82,7 @@
 }
 
 .grid {
+  max-width: 40vw;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
@@ -127,7 +128,8 @@
 
 @media (max-width: 600px) {
   .grid {
-    width: 100%;
+    max-width: 95vw;
     flex-direction: column;
+    
   }
 }
