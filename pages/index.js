@@ -3,6 +3,8 @@ import Head from "next/head";
 import dynamic from 'next/dynamic';
 import { DefaultButton } from '@fluentui/react/lib-commonjs/Button';
 
+import { locations as locationData } from "../src/lib/locations";
+
 import styles from "../styles/Home.module.css";
 
 const isServer = () => typeof window === 'undefined';
@@ -12,6 +14,7 @@ const NoSSRComponent = dynamic(() => import("../src/components/Map"), {
 });
 
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -31,12 +34,20 @@ export default function Home() {
           <p className={styles.description}>Místo pro váš příští výlet!</p>
 
         </div>
-        <DefaultButton style={{
-          marginTop: 50,
-          background: "#ACF39D",
-          width: 200,
-          maxWidth: "90%"
-        }}
+        <div>
+        </div>
+
+        <DefaultButton
+          onClick={() => {
+            const randomLoc = locationData[Math.floor(Math.random() * locationData.length)];
+            alert(randomLoc.name);
+          }}
+          style={{
+            marginTop: 50,
+            background: "#ACF39D",
+            width: 200,
+            maxWidth: "90%"
+          }}
         >
           Nevím cum!
         </DefaultButton>
