@@ -1,5 +1,6 @@
 import styles from "../../styles/Place.module.css";
 import Head from "next/head";
+import Link from "next/link";
 
 import { locations as locationData } from "../../src/lib/locations";
 import Rating from "../../src/components/Rating";
@@ -19,6 +20,11 @@ export default function PlacePage({ additionalInfo }) {
         />
       </Head>
 
+      <header>
+        <Link href="/">
+          <img className={styles.logo} src="/logo.png" />
+        </Link>
+      </header>
       <main className={styles.main}></main>
 
       <div>

@@ -9,6 +9,16 @@
   height: 100vh;
 }
 
+.logo {
+  width: 10rem;
+  max-width: 90vw;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  cursor: pointer;
+}
+
 .description {
   font-size: 1.2rem;
   max-width: 60vw;
