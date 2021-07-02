@@ -1,0 +1,21 @@
+.container {
+  font-family: "Comfortaa", cursive;
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.description {
+  font-size: 1.2rem;
+  max-width: 60vw;
+}
+
+@media (max-width: 600px) {
+  .description {
+    max-width: 90vw;
+  }
+}
