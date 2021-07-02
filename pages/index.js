@@ -11,10 +11,6 @@ import styles from "../styles/Home.module.css";
 
 const isServer = () => typeof window === 'undefined';
 
-const NoSSRComponent = dynamic(() => import("../src/components/Map"), {
-  ssr: false,
-});
-
 export default function Home() {
 
   return (

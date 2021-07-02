@@ -7,7 +7,6 @@ import Rating from "../../src/components/Rating";
 
 import Image from 'next/image'
 
-
 export default function PlacePage({ additionalInfo }) {
   return (
     <div className={styles.container}>
@@ -33,7 +32,7 @@ export default function PlacePage({ additionalInfo }) {
       <div>
         <h2>{additionalInfo.name}</h2>
         <div>
-          <iframe width="100%" height="400" frameborder="0" src={`https://www.bing.com/maps/embed?cp=${additionalInfo.location[0]}~${additionalInfo.location[1]}&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8`} scrolling="no">
+          <iframe width="100%" height="400" frameBorder="0" src={`https://www.bing.com/maps/embed?cp=${additionalInfo.location[0]}~${additionalInfo.location[1]}&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8`} scrolling="no">
           </iframe>
 
         </div>
