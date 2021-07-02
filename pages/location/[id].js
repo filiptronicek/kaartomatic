@@ -5,6 +5,9 @@ import Link from "next/link";
 import { locations as locationData } from "../../src/lib/locations";
 import Rating from "../../src/components/Rating";
 
+import Image from 'next/image'
+
+
 export default function PlacePage({ additionalInfo }) {
   return (
     <div className={styles.container}>
@@ -13,16 +16,16 @@ export default function PlacePage({ additionalInfo }) {
         <meta name="description" content="The place for your next vacation" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
           rel="stylesheet"
         />
       </Head>
 
-      <header>
+      <header style={{ marginTop: "15vh" }}>
         <Link href="/">
-          <img className={styles.logo} src="/logo.png" />
+          <Image className={styles.logo} src="/logo.png" width={200} height={200} />
         </Link>
       </header>
       <main className={styles.main}></main>
@@ -30,7 +33,7 @@ export default function PlacePage({ additionalInfo }) {
       <div>
         <h2>{additionalInfo.name}</h2>
         <div>
-          <iframe width="500" height="400" frameborder="0" src={`https://www.bing.com/maps/embed?h=400&w=500&cp=${additionalInfo.location[0]}~${additionalInfo.location[1]}&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8`} scrolling="no">
+          <iframe width="100%" height="400" frameborder="0" src={`https://www.bing.com/maps/embed?cp=${additionalInfo.location[0]}~${additionalInfo.location[1]}&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8`} scrolling="no">
           </iframe>
 
         </div>
