@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from "next/head";
 import dynamic from 'next/dynamic';
+import Router from "next/router";
+
 import { DefaultButton } from '@fluentui/react/lib-commonjs/Button';
 
 import { locations as locationData } from "../src/lib/locations";
@@ -40,7 +42,7 @@ export default function Home() {
         <DefaultButton
           onClick={() => {
             const randomLoc = locationData[Math.floor(Math.random() * locationData.length)];
-            alert(randomLoc.name);
+            Router.push(`/location/${randomLoc.id}`);
           }}
           style={{
             marginTop: 50,
