@@ -51,7 +51,7 @@ export default function Home() {
             maxWidth: "90%"
           }}
         >
-          Nevím cum!
+          Nevím kam!
         </DefaultButton>
         <div className={styles.grid}>
           <p>
