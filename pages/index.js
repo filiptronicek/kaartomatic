@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from "next/head";
-import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import Router from "next/router";
 
 import { DefaultButton } from '@fluentui/react/lib-commonjs/Button';
@@ -26,7 +26,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.hero}>
-          <img src="/logo.png" />
+          <Image src="/logo.png" width={200} height={200} />
           <h1 className={styles.title}>Kaartomatic</h1>
 
           <p className={styles.description}>Místo pro váš příští výlet!</p>
@@ -58,7 +58,6 @@ export default function Home() {
             Kaartomatic je projekt, který jsme vyvíjeli srdcem s láskou k naší vlasti a jejím zajímavým místům. 💚
           </p>
         </div>
-        {isServer && <NoSSRComponent />}
       </main>
 
       <footer className={styles.footer}>
